@@ -1,0 +1,21 @@
+
+.odd-number {
+	font-family: Verdana, 'DejaVu Sans', sans-serif;
+	background-color: rgba(255, 0, 0, 30%);
+}
+
+#second {
+	color: rgba(0, 0, 255, 100%);
+	font-size: 36px;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.mod-font-size {
+	font-size: 24px;
+}
+
+#fourth {
+	background-color: rgba(0, 255, 0, 30%);
+	font-size: 24px;
+	font-weight: bold;
+}
