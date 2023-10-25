@@ -14,8 +14,9 @@ body {
 }
 
 #header-logo {
-	/*margin-top: 0px;*/
 	margin-right: 20vw;
+	color: #f9faf8;
+	font-size: 24px;
 }
 
 .hero {
@@ -29,9 +30,17 @@ ul {
 	margin: auto;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+	color: #e5e7eb;
+}
+
 li {
 	display: inline-flex;
 	margin: auto 20px;
 	color: #e5e7eb;
-
+	font-size: 18px;
 }
