@@ -81,3 +81,40 @@ li {
 	color: #e5e7eb;
 	font-size: 18px;
 }
+
+.info {
+	text-align: center;
+	padding: 0px 10vw;
+}
+
+.info-imgs {
+	display: flex;
+	justify-content: space-evenly;
+
+}
+
+figure {
+	max-width: 200px;
+}
+
+figcaption {
+	color: #71797E;
+}
+
+.info img {
+	height: 200px;
+	width: 200px;
+	object-fit: cover;
+	object-position: 80%;
+	border-radius: 20px;
+}
+
+.info h2 {
+	font-size: 36px;
+	font-weight: bold;
+	margin: 40px auto;
+}
+
+.footer {
+	height: 500px;
+}
