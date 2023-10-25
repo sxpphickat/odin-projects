@@ -11,6 +11,7 @@ body {
 .header {
 	padding: 0px;
 	display: inline-flex;
+	width: 100%;
 }
 
 #header-logo {
@@ -23,11 +24,12 @@ body {
 	background-color: #1F2937;
 	color: white;
 	margin: 0px;
-	padding: 0px 20vw;
+	padding: 0px 10vw;
 }
 
 ul {
 	margin: auto;
+	margin-right: 0px;
 }
 
 a:link,
@@ -40,7 +42,29 @@ a:active {
 
 li {
 	display: inline-flex;
-	margin: auto 20px;
+	margin: auto 0px auto 40px;
+	color: #e5e7eb;
+	font-size: 18px;
+}
+
+.main-img img {
+	height: auto;
+	max-width: 85%;
+	float: right;
+}
+
+.main {
+	display: flex;
+	padding: 90px 0px;
+}
+
+
+.main-text h1 {
+	color: #f9faf8;
+	font-size: 48px;
+}
+
+.main p {
 	color: #e5e7eb;
 	font-size: 18px;
 }
