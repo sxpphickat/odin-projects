@@ -84,7 +84,8 @@ li {
 
 .info {
 	text-align: center;
-	padding: 0px 10vw;
+	padding: 3vw 10vw;
+	padding-bottom: 6vw;
 }
 
 .info-imgs {
@@ -112,9 +113,35 @@ figcaption {
 .info h2 {
 	font-size: 36px;
 	font-weight: bold;
-	margin: 40px auto;
+	margin-bottom: 30px;
 }
 
 .footer {
 	height: 500px;
+}
+
+.quote-section {
+	background-color: #e5e7eb;
+	padding: 0px 10vw;
+	font-size: 36px;
+	color: #1f2937;
+	padding: 2.5em;
+}
+
+.quote {
+	font-weight: lighter;
+	font-style: italic;
+	margin-bottom: 0px;
+}
+
+.align-quote {
+	margin: auto 7em;
+}
+
+.quotee {
+	text-align: end;
+	font-weight: bold;
+	font-size: 24px;
+	margin-right: 50px;
+	margin-top: 0px;
 }
