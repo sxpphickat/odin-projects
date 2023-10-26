@@ -1,0 +1,184 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	padding: 0px;
+	margin: 0px;
+}
+
+.container {
+	margin: 0px;
+}
+
+.header {
+	padding: 0px;
+	display: inline-flex;
+	width: 100%;
+}
+
+#header-logo {
+	margin-right: 20vw;
+	color: #f9faf8;
+	font-size: 24px;
+}
+
+.hero {
+	background-color: #1F2937;
+	color: white;
+	margin: 0px;
+	padding: 0px 10vw;
+}
+
+ul {
+	margin: auto;
+	margin-right: 0px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+	color: #e5e7eb;
+}
+
+li {
+	display: inline-flex;
+	margin: auto 0px auto 40px;
+	color: #e5e7eb;
+	font-size: 18px;
+}
+
+.main-img img {
+	height: auto;
+	max-width: 85%;
+	float: right;
+	border-radius: 15px;
+}
+
+.main {
+	display: flex;
+	padding: 90px 0px;
+}
+
+
+.main-text h1 {
+	color: #f9faf8;
+	font-size: 48px;
+}
+
+.main-text button {
+	width: 120px;
+	height: 40px;
+	border: none;
+	border-radius: 7px;
+	background-color: #2882f6;
+	color: #f9faf8;
+	font-size: 15px;
+	/* font-weight: bold; */
+	font-weight: bold;
+}
+
+.main p {
+	color: #e5e7eb;
+	font-size: 18px;
+}
+
+.info {
+	text-align: center;
+	padding: 3vw 10vw;
+	padding-bottom: 6vw;
+}
+
+.info-imgs {
+	display: flex;
+	justify-content: space-evenly;
+
+}
+
+figure {
+	max-width: 200px;
+}
+
+figcaption {
+	color: #71797E;
+}
+
+.info img {
+	height: 200px;
+	width: 200px;
+	object-fit: cover;
+	object-position: 80%;
+	border-radius: 20px;
+}
+
+.info h2 {
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.quote-section {
+	background-color: #e5e7eb;
+	padding: 0px 10vw;
+	font-size: 36px;
+	color: #1f2937;
+	padding: 2.5em;
+}
+
+.quote {
+	font-weight: lighter;
+	font-style: italic;
+	margin-bottom: 0px;
+}
+
+.align-quote {
+	margin: auto 7em;
+}
+
+.quotee {
+	text-align: end;
+	font-weight: bold;
+	font-size: 24px;
+	margin-right: 50px;
+	margin-top: 0px;
+}
+
+.call-to-action {
+	padding: 15vh 15vw;
+}
+
+.blue-color {
+	background-color: #3882f6;
+	border-radius: 10px;
+	color: #f9faf8;
+ 	display: flex;
+	padding: 50px 10vw;
+
+}
+
+.blue-color button {
+	margin-left: 25%;
+	width: 120px;
+	background-color: inherit;
+	border-color: white;
+	border-radius: 10px;
+	border-style: solid;
+	color: white;
+}
+
+.blue-color h3, p{
+	margin: 0px ;
+}
+
+button:hover {
+	background-color: #3171d7;
+}
+
+.footer {
+	height: 100px;
+	background-color: #1F2937;
+	color: white;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
