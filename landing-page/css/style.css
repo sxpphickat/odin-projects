@@ -116,10 +116,6 @@ figcaption {
 	margin-bottom: 30px;
 }
 
-.footer {
-	height: 500px;
-}
-
 .quote-section {
 	background-color: #e5e7eb;
 	padding: 0px 10vw;
@@ -144,4 +140,45 @@ figcaption {
 	font-size: 24px;
 	margin-right: 50px;
 	margin-top: 0px;
+}
+
+.call-to-action {
+	padding: 15vh 15vw;
+}
+
+.blue-color {
+	background-color: #3882f6;
+	border-radius: 10px;
+	color: #f9faf8;
+ 	display: flex;
+	padding: 50px 10vw;
+
+}
+
+.blue-color button {
+	margin-left: 25%;
+	width: 120px;
+	background-color: inherit;
+	border-color: white;
+	border-radius: 10px;
+	border-style: solid;
+	color: white;
+}
+
+.blue-color h3, p{
+	margin: 0px ;
+}
+
+button:hover {
+	background-color: #3171d7;
+}
+
+.footer {
+	height: 100px;
+	background-color: #1F2937;
+	color: white;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
