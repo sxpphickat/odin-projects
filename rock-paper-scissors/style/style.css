@@ -1,0 +1,93 @@
+body {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	background-color: #3A4D39;
+	color: #ECE3CE;
+}
+
+#container {
+	max-width: 600px;
+	margin: auto;
+
+}
+
+#game {
+	display: flex;
+	margin: 30px auto;
+	justify-content: space-around;
+
+}
+
+#game p {
+	font-size: large;
+	font-weight: bold;
+}
+
+#player-result, #computer-result, #winner {
+	font-size: 60px;
+}
+
+
+
+#choice {
+	align-self: center;
+	display: flex;
+	justify-content: space-around;
+	margin: 30px auto
+}
+
+#choice button {
+	background-color: #ECE3CE;
+	font-size: 70px;
+	border-radius: 25px;;
+	border-style: none;
+}
+
+#scoreboard {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: large;
+	font-weight: bold;
+	width: 20%;
+	margin: auto;
+}
+
+#scoreboard h{
+}
+
+.overlay {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 70%);
+}
+
+#game-winner {
+	position: relative;
+	margin: 0;
+	top: 40%;
+	color: #ECE3CE;
+	width: 30%;
+	margin: auto;
+}
+
+
+#game-winner button {
+	background-color: #ECE3CE;
+	color: #3A4D39;
+	font-weight: bolder;
+	font-size: larger;
+	height: 40px;
+	border-style: none;
+	border-radius: 7px;
+}
+
+#choice button:hover, #overlay button:hover {
+	background-color: #ece3cec1;
+}

@@ -3,10 +3,54 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>🪨📜✂️</title>
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300&display=swap" rel="stylesheet">
 	<!-- <link rel="script" href="javascript/game.js"> -->
 </head>
 <body>
-	<script src="javascript/game.js"></script>
+	<div id="overlay" class="overlay">
+
+		<div id="game-winner">
+			<h1>aaa</h1>
+			<button>Play Again 🔃</button>
+		</div>
+	</div>
+	<div id="container">
+		<h1>Rock🪨, Paper📜, Scissors✂️</h1>
+		<h2>First to reach 5 points win! 🏆</h2>
+		<div id="scoreboard">
+			<div id="player-score">
+				<span>🫵:</span>
+				<span class="score">0</span>
+			</div>
+			<div id="computer-score">
+				<span>🤖:</span>
+				<span class="score">0</span>
+			</div>
+		</div>
+		<h2>Choose your move</h2>
+		<div id="choice">
+			<button id="rock">🪨</button>
+			<button id="paper">📜</button>
+			<button id="scissors">✂️</button>
+		</div>
+		<div id="game">
+			<div id="player">
+				<p>You 🫵 chose:</p>
+				<div id="player-result">🎲</div>
+			</div>
+			<div id="computer">
+				<p>Computer 🤖 chose:</p>
+				<div id="computer-result">🎲</div>
+
+			</div>
+		</div>
+		<h2>Match Winner 🏆</h2>
+		<div id="winner">🤺</div>
+		<script src="javascript/game.js"></script>
+	</div>
 </body>
 </html>
