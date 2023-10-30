@@ -42,13 +42,10 @@ function checkWinner() {
 	if (playerPoints == 5) {
 		document.querySelector("#overlay h1").innerText = "YOU WIN 🏆🏆🏆";
 		overlayOn();
-	//	alert("You Win !!");
-	//	window.location.reload();
+
 	} else if (computerPoints == 5) {
 		document.querySelector("#overlay h1").innerText = "COMPUTER WINS 🏆🏆🏆";
 		overlayOn();
-		///	alert("Computer Win!!");
-	//	window.location.reload();
 	}
 }
 
@@ -76,7 +73,6 @@ function playRound(playerSelection, computerSelection) {
 
 	if (playerSelection == computerSelection) {
 		winner.innerText = "🤝";
-		//return "It's a tie!";
 	} else if (
 		(playerSelection == "rock" && computerSelection == "scissors") ||
 		(playerSelection == "scissors" && computerSelection == "paper") ||
@@ -100,41 +96,12 @@ function updateScoreBoard() {
 	computerScore.innerHTML = computerPoints;
 }
 
-const overlay = document.querySelector(".overlay");
-
-
 function overlayOn() {
 	document.querySelector("#overlay").style.display = "block";
 }
-
-
-function overlayOff() {
-	document.querySelector("#overlay").style.display = "none";
-}
-
 
 const overlayButton = document.querySelector("#overlay button");
 
 overlayButton.addEventListener("click", () => {
 	window.location.reload();
 });
-
-/* function game() {
-	for (let i = 0; i < 5; i += 1) {
-		console.log("| scoreboar  |");
-		console.log(`| computer: ${computerPoints}|`);
-		console.log(`| player: ${playerPoints}  |`);
-		console.log(playRound(getPlayerChoice(), getComputerChoice()));
-	}
-	console.log(`Final Scoce:`);
-	console.log(`| computer: ${computerPoints}|`);
-	console.log(`| player: ${playerPoints}  |`);
-	if (playerPoints > computerPoints) {
-		console.log("PLAYER WINS MD5 🏆");
-	} else {
-		console.log("COMPUTER WINS MD5 🏆");
-	}
-}
-
-game(); */
-
