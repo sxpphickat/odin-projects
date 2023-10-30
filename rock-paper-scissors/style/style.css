@@ -1,0 +1,51 @@
+body {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+#container {
+	max-width: 600px;
+	margin: auto;
+
+}
+
+#game {
+	display: flex;
+	margin: 30px auto;
+	justify-content: space-around;
+
+}
+
+#game p {
+	font-size: large;
+	font-weight: bold;
+}
+
+#player-result, #computer-result, #winner {
+	font-size: 60px;
+}
+
+
+
+#choice {
+	align-self: center;
+	display: flex;
+	justify-content: space-around;
+	margin: 30px auto
+}
+
+#choice button{
+	font-size: 70px;
+	border-radius: 25px;;
+}
+
+#scoreboard {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#scoreboard {
+	width: 20%;
+	margin: auto;
+}
