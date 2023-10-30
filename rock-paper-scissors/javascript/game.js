@@ -38,6 +38,20 @@ function getPlayerChoice(event) {
 	playRound(choice, getComputerChoice());
 }
 
+function checkWinner() {
+	if (playerPoints == 5) {
+		document.querySelector("#overlay h1").innerText = "YOU WIN 🏆🏆🏆";
+		overlayOn();
+	//	alert("You Win !!");
+	//	window.location.reload();
+	} else if (computerPoints == 5) {
+		document.querySelector("#overlay h1").innerText = "COMPUTER WINS 🏆🏆🏆";
+		overlayOn();
+		///	alert("Computer Win!!");
+	//	window.location.reload();
+	}
+}
+
 const playerChoiceEmoji = document.querySelector("#player-result");
 const computerChoiceEmoji = document.querySelector("#computer-result");
 const winner = document.querySelector("#winner");
@@ -75,6 +89,7 @@ function playRound(playerSelection, computerSelection) {
 		winner.innerText = "🤖";
 	}
 	updateScoreBoard();
+	checkWinner();
 }
 
 const playerScore = document.querySelector("#player-score .score");
@@ -85,8 +100,24 @@ function updateScoreBoard() {
 	computerScore.innerHTML = computerPoints;
 }
 
+const overlay = document.querySelector(".overlay");
 
 
+function overlayOn() {
+	document.querySelector("#overlay").style.display = "block";
+}
+
+
+function overlayOff() {
+	document.querySelector("#overlay").style.display = "none";
+}
+
+
+const overlayButton = document.querySelector("#overlay button");
+
+overlayButton.addEventListener("click", () => {
+	window.location.reload();
+});
 
 /* function game() {
 	for (let i = 0; i < 5; i += 1) {
