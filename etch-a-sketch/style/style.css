@@ -22,6 +22,15 @@ body {
 	gap: 40px;
 }
 
+.btn {
+	font-size: 28px;
+	font-family: 'Pixelify Sans', sans-serif;
+	font-weight: 400;
+	width: 174px;
+	border-radius: 0px;
+	border-style: none;
+}
+
 
 
 #canva {
