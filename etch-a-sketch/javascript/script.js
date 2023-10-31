@@ -1,9 +1,7 @@
 const canva = document.querySelector(".canva");
 
-
-
-const	squaresPerSize = 16;
-let		color = "#000000";
+let	squaresPerSize = 16;
+let	color = "#000000";
 
 const canvaSize = 500; // same as css
 
@@ -12,8 +10,6 @@ let divSize =	Math.round(canvaSize / squaresPerSize)
 					.concat("px");
 
 console.log(divSize);
-
-
 
 function fillCanva(size) {
 	//create single row
