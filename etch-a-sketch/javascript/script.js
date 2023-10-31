@@ -22,24 +22,27 @@ function fillCanva(size) {
 
 fillCanva(canvaSize);
 
-/* canva.addEventListener("click", (event) => {
-	const target = event.target;
-
-	target.style.backgroundColor = color;
-	console.log("aa");
-}); */
-
 
 canva.addEventListener("mousedown", (event) => {
-	if (event.button == 0) {
-
+	if (event.button == 0) { // 0 == left mouse button
 		event.target.style.backgroundColor = color;
 		canva.addEventListener("mouseover", draw);
+	} else if (event.button == 2) { // 2 == right mouse button
+		event.target.style.backgroundColor = "#ffffff";
+		canva.addEventListener("mouseover", erase);
 	}
 });
 
-canva.addEventListener("mouseup", () => {
-	canva.removeEventListener("mouseover", draw);
+canva.addEventListener("mouseup", (event) => {
+	if (event.button == 0) {
+		canva.removeEventListener("mouseover", draw);
+	} else if (event.button == 2) {
+		canva.removeEventListener("mouseover", erase);
+	}
+});
+
+canva.addEventListener("contextmenu", (event) => {
+	event.preventDefault();
 });
 
 function draw(event) {
@@ -47,10 +50,7 @@ function draw(event) {
 		event.target.style.backgroundColor = color;
 };
 
-/* canva.addEventListener("contextmenu", erase);
-
-
 function erase(event) {
 	event.preventDefault();
 	event.target.style.backgroundColor = "#ffffff";
-} */
+}
