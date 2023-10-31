@@ -11,12 +11,14 @@ body {
 }
 
 #canva {
+	height: 500px;
+	width: 500px;
 }
 
 .grid {
 	background-color: white;
-	height: 32px;
-	width: 32px;
+/* 	height: 32px;
+	width: 32px; */
 /* 	border-style: solid;
 	border-color: lightgray;
 	border-width: 1px; */
