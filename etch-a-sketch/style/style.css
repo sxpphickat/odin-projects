@@ -1,0 +1,31 @@
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: gray;
+}
+
+#canva {
+}
+
+.grid {
+	background-color: white;
+	height: 32px;
+	width: 32px;
+/* 	border-style: solid;
+	border-color: lightgray;
+	border-width: 1px; */
+}
+
+.row {
+	display: flex;
+}
+
+.grid:hover {
+	filter: brightness(95%);
+}
