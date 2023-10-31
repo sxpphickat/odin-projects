@@ -29,20 +29,28 @@ fillCanva(canvaSize);
 	console.log("aa");
 }); */
 
-let mouseDown = false;
 
-canva.addEventListener("mousedown", () => {
-	mouseDown = true;
+canva.addEventListener("mousedown", (event) => {
+	if (event.button == 0) {
+
+		event.target.style.backgroundColor = color;
+		canva.addEventListener("mouseover", draw);
+	}
 });
 
 canva.addEventListener("mouseup", () => {
-	mouseDown = false;
+	canva.removeEventListener("mouseover", draw);
 });
 
-canva.addEventListener("mouseover", (event) => {
-	if (mouseDown) {
-		console.log(color);
+function draw(event) {
+//	console.log(color);
 		event.target.style.backgroundColor = color;
-	}
-	console.log(color);
-});
+};
+
+/* canva.addEventListener("contextmenu", erase);
+
+
+function erase(event) {
+	event.preventDefault();
+	event.target.style.backgroundColor = "#ffffff";
+} */
