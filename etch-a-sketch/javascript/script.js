@@ -2,8 +2,18 @@ const canva = document.querySelector(".canva");
 
 
 
-const	canvaSize = 16;
+const	squaresPerSize = 16;
 let		color = "#000000";
+
+const canvaSize = 500; // same as css
+
+let divSize =	Math.round(canvaSize / squaresPerSize)
+				  	.toString()
+					.concat("px");
+
+console.log(divSize);
+
+
 
 function fillCanva(size) {
 	//create single row
@@ -14,16 +24,22 @@ function fillCanva(size) {
 		for (let i = 0; i < size; i += 1) {
 			const div = document.createElement("div");
 			div.classList.toggle("grid");
+			div.style.height = divSize;
+			div.style.width = divSize;
 			row.appendChild(div);
 		}
-		canva.appendChild(row);
+	canva.appendChild(row);
 	}
 }
 
-fillCanva(canvaSize);
+fillCanva(squaresPerSize);
 
 
 canva.addEventListener("mousedown", (event) => {
+	console.log(event);
+	if (!event.target.classList.contains("grid")) {
+		return ;
+	}
 	if (event.button == 0) { // 0 == left mouse button
 		event.target.style.backgroundColor = color;
 		canva.addEventListener("mouseover", draw);
@@ -46,11 +62,17 @@ canva.addEventListener("contextmenu", (event) => {
 });
 
 function draw(event) {
-//	console.log(color);
-		event.target.style.backgroundColor = color;
+	if (!event.target.classList.contains("grid")) {
+		return ;
+	}
+	event.target.style.backgroundColor = color;
 };
 
 function erase(event) {
-	event.preventDefault();
+	if (!event.target.classList.contains("grid")) {
+		return ;
+	}
 	event.target.style.backgroundColor = "#ffffff";
 }
+
+
