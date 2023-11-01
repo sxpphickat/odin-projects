@@ -7,3 +7,8 @@ just trying web dev
 
 [rock-paper-scissors](https://sxpphickat.github.io/odin-projects/rock-paper-scissors/)
 
+[etch-a-sketch](https://sxpphickat.github.io/odin-projects/etch-a-sketch/)
+
+
+
+
