@@ -5,13 +5,11 @@ let	color = "#000000";
 
 const canvaSize = 500; // same as css
 
-let divSize =	Math.round(canvaSize / squaresPerSize)
-				  	.toString()
-					.concat("px");
-
-console.log(divSize);
 
 function fillCanva(size) {
+	let divSize =	Math.round(canvaSize / squaresPerSize)
+						.toString()
+						.concat("px");
 	//create single row
 	for (let i = 0; i < size; i += 1) {
 		const row = document.createElement("div");
@@ -32,7 +30,6 @@ fillCanva(squaresPerSize);
 
 
 canva.addEventListener("mousedown", (event) => {
-	console.log(event);
 	if (!event.target.classList.contains("grid")) {
 		return ;
 	}
@@ -71,4 +68,31 @@ function erase(event) {
 	event.target.style.backgroundColor = "#ffffff";
 }
 
+const setSquaresPerSize = document.querySelector("#squares-per-size");
+
+setSquaresPerSize.addEventListener("click", () => {
+	let size = -1;
+	while (size < 1 || size > 100 || isNaN(size)) {
+		size = Number(prompt("Select a size between 1 and 100"));
+		if (size == 0) {
+			return ;
+		}
+	}
+	squaresPerSize = size;
+	canva.innerHTML = "";
+	fillCanva(squaresPerSize);
+});
+
+const clearCanva = document.querySelector("#clear-canva");
+
+clearCanva.addEventListener("click", () => {
+	canva.innerHTML = "";
+	fillCanva(squaresPerSize);
+});
+
+const colorPicker = document.querySelector("#color-picker");
+
+colorPicker.addEventListener("input", () => {
+	color = colorPicker.value;
+});
 
