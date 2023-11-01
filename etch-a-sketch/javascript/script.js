@@ -5,7 +5,6 @@ let	color = "#000000";
 
 const canvaSize = 500; // same as css
 
-
 function fillCanva(size) {
 	let divSize =	Math.round(canvaSize / squaresPerSize)
 						.toString()
@@ -96,4 +95,3 @@ const colorPicker = document.querySelector("#color-picker");
 colorPicker.addEventListener("input", () => {
 	color = colorPicker.value;
 });
-
