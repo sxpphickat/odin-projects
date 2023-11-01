@@ -1,0 +1,93 @@
+html {
+	height: 90%;
+}
+
+body {
+	background-color: rgb(221, 221, 221);
+	height: 100%;
+	font-family: 'Pixelify Sans', sans-serif;
+}
+
+
+.aling-header {
+	display: flex;
+	justify-content: center;
+}
+
+h1 {
+	font-size: 48px;
+	margin: auto;
+}
+
+.centralize-canva {
+	min-height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.controls {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	height: 10%;
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+}
+
+#color-picker {
+	height: 64px;
+	appearance: none;
+	padding: 0;
+	border-style: none;
+}
+
+#squares-per-size {
+	font-weight: 600;
+}
+
+.btn {
+	cursor: pointer;
+ 	font-size: 28px;
+	font-family: 'Pixelify Sans', sans-serif;
+	font-weight: 400;
+	min-width: 174px;
+	height: 64px;
+	border-radius: 0px;
+	border-style: none;
+	box-shadow: 5px 7px #000;
+	background-color: #fff;
+}
+
+.btn:hover {
+	background-color: #fff;
+}
+
+.btn:active {
+	background-color: #fff;
+	box-shadow: 3px 4px #000;
+	transform: translateY(3px);
+	transform: translateX(2px);
+}
+
+
+
+
+#canva {
+	height: 500px;
+	width: 500px;
+}
+
+.grid {
+	background-color: white;
+}
+
+.row {
+	display: flex;
+	align-items: ;
+	justify-content: end;
+}
+
+.grid:hover {
+	filter: brightness(95%);
+}
