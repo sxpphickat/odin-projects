@@ -79,6 +79,7 @@ setSquaresPerSize.addEventListener("click", () => {
 		}
 	}
 	squaresPerSize = size;
+	setSquaresPerSize.innerText = size + " x " + size;
 	canva.innerHTML = "";
 	fillCanva(squaresPerSize);
 });

@@ -40,9 +40,10 @@ h1 {
 	appearance: none;
 	padding: 0;
 	border-style: none;
-	padding-block: 0px;
-    padding-inline: 0px;
-	border-width: 0px;
+}
+
+#squares-per-size {
+	font-weight: 600;
 }
 
 .btn {
