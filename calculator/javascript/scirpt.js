@@ -35,60 +35,69 @@ function operate(numA, numB, operator) {
 	}
 }
 
-
-/* const result = operate(123, 0, "/");
-
-console.log(result); */
-
 let leftOperand = 0; // vou multiplicar por 10 e dps somar o numero digitado
 let rightOperand = 0;
-let operator = "";
-let bufferNum = 0;
 let operationResult = 0;
+let hadOperation = false;
+let operator = "";
 
-const buttons = document.querySelector(".buttons");
-
+const buttons = document.querySelector(".keyboard");
 const result = document.querySelector(".result p");
 const equation = document.querySelector(".equation p");
+
+function handleNumber(target) {
+	if (hadOperation) {
+		equation.innerText = "";
+		hadOperation = false;
+	}
+	rightOperand *= 10;
+	rightOperand += parseInt(target.id);
+	result.innerText = rightOperand;
+}
+
+function handleOperator(target) {
+	if (hadOperation) {
+		leftOperand = operationResult;
+	} else {
+		leftOperand = rightOperand;
+	}
+	//if (operator != "")
+	equation.innerText = ` ${leftOperand} ${target.innerText} `;
+	//rightOperand = 0;
+	operator = target.id;
+}
+
+function handleEquals(target) {
+	switch (operator) {
+		case "times":
+			operationResult = multiply(leftOperand, rightOperand);
+			break ;
+		case "add":
+			operationResult = add(leftOperand, rightOperand);
+			break ;
+		case "sub":
+			operationResult = subtract(leftOperand, rightOperand);
+			break ;
+		case "div":
+			operationResult = divide(leftOperand, rightOperand);
+			break ;		
+	}
+	equation.innerText += ` ${rightOperand} =`;
+	result.innerText = operationResult;
+	rightOperand = 0;
+	leftOperand = operationResult;
+	hadOperation = true;
+}
 
 buttons.addEventListener("click", (event) => {
 	const target = event.target;
 	if (target.classList.contains("number")) {
-		/* equation.innerText = operationResult; */
-		bufferNum *= 10;
-		bufferNum += parseInt(target.id);
-		result.innerText = bufferNum;
+		handleNumber(target);
 	}
 	if (target.classList.contains("operator")) {
-		leftOperand = bufferNum;
-		equation.innerText += ` ${leftOperand} `;
-		equation.innerText += ` ${target.innerText} `;
-		bufferNum = 0;
-		operator = target.id;
+		handleOperator(target);
 	}
 	if (target.classList.contains("eq")) {
-		console.log("here");
-		switch (operator) {
-			case "times":
-				operationResult = multiply(leftOperand, bufferNum);
-				break ;
-			case "add":
-				operationResult = add(leftOperand, bufferNum);
-				break ;
-			case "sub":
-				operationResult = subtract(leftOperand, bufferNum);
-				break ;
-			case "div":
-				operationResult = divide(leftOperand, bufferNum);
-				break ;
-		}
-		equation.innerText += ` ${bufferNum} =`;
-		result.innerText = operationResult;
-		bufferNum = 0;
+		handleEquals(target);
 	}
-	
-	console.log({bufferNum});
-	console.log({leftOperand});
-	//console.log({rightOperand});
-	console.log({operator});
 });
