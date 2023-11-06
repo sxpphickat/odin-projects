@@ -6,6 +6,12 @@
 
 body {
 	font-family: 'DigitalNumbers', 'Roboto', sans-serif;
+	caret-color: transparent;
+}
+
+.title {
+	width: 400px;
+	margin: 20px auto;
 }
 
 .container {
@@ -92,7 +98,7 @@ button {
 }
 
 button:hover {
-	filter: brightness(70%);
+	filter: brightness(90%);
 }
 
 .numbers .ce {

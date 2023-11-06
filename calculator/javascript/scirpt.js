@@ -27,7 +27,6 @@ function operate(numA, numB, operator) {
 			if(numB == 0) {
 				alert("division by 0 not allowed!");
 				console.log("division by 0 not allowed!");
-				clean();
 				break ;
 			}
 			return divide(numA, numB);
@@ -36,9 +35,10 @@ function operate(numA, numB, operator) {
 	}
 }
 
-let leftOperand = 0; // vou multiplicar por 10 e dps somar o numero digitado
+let leftOperand = 0;
 let rightOperand = 0;
 let operationResult = 0;
+let hadOperation = false;
 let operator = null;
 
 const buttons = document.querySelector(".keyboard");
@@ -46,10 +46,6 @@ const result = document.querySelector(".result p");
 const equation = document.querySelector(".equation p");
 
 function handleNumber(target) {
-/* 	if (hadOperation) {
-		equation.innerText = "";
-		hadOperation = false;
-	} */
 	rightOperand *= 10;
 	rightOperand += parseInt(target.id);
 	result.innerText = rightOperand;
@@ -58,12 +54,21 @@ function handleNumber(target) {
 function handleOperator(target) {
 	if (operator != null) {
 		console.log("here");
+		console.log({leftOperand});
 		console.log({rightOperand});
+		operator = target.id;
 		leftOperand = operate(leftOperand, rightOperand, operator);
+		if (leftOperand == undefined) {
+			clean();
+			return;
+		}
 		console.log({leftOperand});
 		equation.innerText = `${leftOperand} ${target.innerText}`;
 	} else {
-		leftOperand = rightOperand;
+		if (!hadOperation) {
+			leftOperand = rightOperand;
+			hadOperation = true;
+		}
 		result.innerText = rightOperand;
 		operator = target.id;
 		equation.innerText = ` ${leftOperand} ${target.innerText} `;
@@ -73,8 +78,11 @@ function handleOperator(target) {
 }
 
 function handleEquals(target) {
-
 	operationResult = operate(leftOperand, rightOperand, operator);
+	if (operationResult == undefined) {
+		clean();
+		return ;
+	}
 	equation.innerText += ` ${rightOperand} =`;
 	result.innerText = operationResult;
 	rightOperand = 0;
@@ -89,8 +97,8 @@ function clean() {
 	leftOperand = 0;
 	rightOperand = 0;
 	operationResult = 0;
+	hadOperation = false;
 	operator = null;
-
 }
 
 buttons.addEventListener("click", (event) => {
