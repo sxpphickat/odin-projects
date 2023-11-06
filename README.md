@@ -9,6 +9,8 @@ just trying web dev
 
 [etch-a-sketch](https://sxpphickat.github.io/odin-projects/etch-a-sketch/)
 
+[calculator](https://sxpphickat.github.io/odin-projects/calculator/)
+
 
 
 
