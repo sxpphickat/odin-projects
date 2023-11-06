@@ -17,16 +17,17 @@ function divide(a, b) {
 
 function operate(numA, numB, operator) {
 	switch(operator) {
-		case "+":
-			return add(numA, numB);
-		case "-":
-			return subtract(numA, numB);
-		case "*":
+		case "times":
 			return multiply(numA, numB);
-		case "/":
+		case "add":
+			return add(numA, numB);
+		case "sub":
+			return subtract(numA, numB);
+		case "div":
 			if(numB == 0) {
-			//	alert("division by 0 not allowed!");
+				alert("division by 0 not allowed!");
 				console.log("division by 0 not allowed!");
+				clean();
 				break ;
 			}
 			return divide(numA, numB);
@@ -38,53 +39,58 @@ function operate(numA, numB, operator) {
 let leftOperand = 0; // vou multiplicar por 10 e dps somar o numero digitado
 let rightOperand = 0;
 let operationResult = 0;
-let hadOperation = false;
-let operator = "";
+let operator = null;
 
 const buttons = document.querySelector(".keyboard");
 const result = document.querySelector(".result p");
 const equation = document.querySelector(".equation p");
 
 function handleNumber(target) {
-	if (hadOperation) {
+/* 	if (hadOperation) {
 		equation.innerText = "";
 		hadOperation = false;
-	}
+	} */
 	rightOperand *= 10;
 	rightOperand += parseInt(target.id);
 	result.innerText = rightOperand;
 }
 
 function handleOperator(target) {
-	if (hadOperation) {
-		leftOperand = operationResult;
+	if (operator != null) {
+		console.log("here");
+		console.log({rightOperand});
+		leftOperand = operate(leftOperand, rightOperand, operator);
+		console.log({leftOperand});
+		equation.innerText = `${leftOperand} ${target.innerText}`;
 	} else {
 		leftOperand = rightOperand;
+		result.innerText = rightOperand;
+		operator = target.id;
+		equation.innerText = ` ${leftOperand} ${target.innerText} `;
 	}
-	equation.innerText = ` ${leftOperand} ${target.innerText} `;
-	operator = target.id;
+	rightOperand = 0;
+	result.innerText = rightOperand;
 }
 
 function handleEquals(target) {
-	switch (operator) {
-		case "times":
-			operationResult = multiply(leftOperand, rightOperand);
-			break ;
-		case "add":
-			operationResult = add(leftOperand, rightOperand);
-			break ;
-		case "sub":
-			operationResult = subtract(leftOperand, rightOperand);
-			break ;
-		case "div":
-			operationResult = divide(leftOperand, rightOperand);
-			break ;		
-	}
+
+	operationResult = operate(leftOperand, rightOperand, operator);
 	equation.innerText += ` ${rightOperand} =`;
 	result.innerText = operationResult;
 	rightOperand = 0;
 	leftOperand = operationResult;
 	hadOperation = true;
+	operator = null;
+}
+
+function clean() {
+	result.innerText = 0;
+	equation.innerText = "";
+	leftOperand = 0;
+	rightOperand = 0;
+	operationResult = 0;
+	operator = null;
+
 }
 
 buttons.addEventListener("click", (event) => {
@@ -97,5 +103,8 @@ buttons.addEventListener("click", (event) => {
 	}
 	if (target.classList.contains("eq")) {
 		handleEquals(target);
+	}
+	if (target.classList.contains("clean-btn")) {
+		clean();
 	}
 });
