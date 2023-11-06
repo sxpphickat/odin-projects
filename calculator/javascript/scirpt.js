@@ -61,9 +61,7 @@ function handleOperator(target) {
 	} else {
 		leftOperand = rightOperand;
 	}
-	//if (operator != "")
 	equation.innerText = ` ${leftOperand} ${target.innerText} `;
-	//rightOperand = 0;
 	operator = target.id;
 }
 

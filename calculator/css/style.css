@@ -1,5 +1,12 @@
+@font-face {
+    font-family: "DigitalNumbers";
+    src: local("DigitalNumbers"), url("../fonts/DigitalNumbers-Regular.ttf") format("truetype");
+}
+
+
 body {
-	font-family: 'Roboto', sans-serif;}
+	font-family: 'DigitalNumbers', 'Roboto', sans-serif;
+}
 
 .container {
 	display: flex;
@@ -12,6 +19,7 @@ body {
 .display {
 	border-style: solid;
 	border-radius: 15px;
+	border-color:  	#bbbbbb;
 	padding: 15px;
 	margin-bottom: 5px;
 	width: 300px;
@@ -33,7 +41,7 @@ body {
 }
 
 .equation p {
-	font-size: 14px;
+	font-size: 11px;
 	color: gray;
 }
 
@@ -44,6 +52,7 @@ body {
 .keyboard {
 	border-style: solid;
 	border-radius: 15px;
+	border-color:#bbbbbb;
 	padding: 15px;
 
 }
@@ -61,9 +70,20 @@ button {
 	font-size: 24px;
 }
 
+.numbers button {
+	background-color: #eeeeee;
+	border-radius: 10px;
+	border-style: none;
+	font-family: inherit;
+}
+
 .operators button{
 	display: block;
 	margin: 5px;
+	border-style: none;
+	border-radius: 10px;
+	background-color:  	#dddddd;
+	font-family: inherit;
 }
 
 .keyboard {
