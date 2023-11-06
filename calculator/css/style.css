@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "DigitalNumbers";
+    src: local("DigitalNumbers"), url("../fonts/DigitalNumbers-Regular.ttf") format("truetype");
+}
+
+
+html {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+body {
+	font-family: 'DigitalNumbers', 'Roboto', sans-serif;
+	caret-color: transparent;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+
+.title {
+	width: 400px;
+	margin: 20px auto;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	width: 300px;
+}
+
+.display {
+	border-style: solid;
+	border-radius: 15px;
+	border-color:  	#bbbbbb;
+	padding: 15px;
+	margin-bottom: 5px;
+	width: 300px;
+}
+
+.equation {
+	display: flex;
+	height: 1em;
+	justify-content: flex-end;
+}
+
+.result {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.equation p, .result p {
+	margin: 0;
+}
+
+.equation p {
+	font-size: 11px;
+	color: gray;
+}
+
+.result p {
+	font-size: 24px;
+}
+
+.keyboard {
+	border-style: solid;
+	border-radius: 15px;
+	border-color:#bbbbbb;
+	padding: 15px;
+
+}
+
+.numbers div{
+	display: flex;
+/* 	justify-content: flex-end; */
+	justify-content: center;
+	gap: 5px;
+	margin: 5px;
+}
+
+button {
+	height: 50px;
+	width: 50px;
+	font-size: 24px;
+}
+
+.numbers button {
+	background-color: #eeeeee;
+	border-radius: 10px;
+	border-style: none;
+	font-family: inherit;
+}
+
+.operators button{
+	display: block;
+	margin: 5px;
+	border-style: none;
+	border-radius: 10px;
+	background-color:  	#dddddd;
+	font-family: inherit;
+}
+
+.keyboard {
+	display: flex;
+	justify-content: center;
+}
+
+button:hover {
+	filter: brightness(90%);
+}
+
+.numbers .ac {
+	justify-content: start;
+}
+
+.numbers .ac button {
+	background-color:  	#ffb09c;
+}
