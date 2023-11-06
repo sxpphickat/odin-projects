@@ -56,8 +56,8 @@ function handleOperator(target) {
 		console.log("here");
 		console.log({leftOperand});
 		console.log({rightOperand});
-		operator = target.id;
 		leftOperand = operate(leftOperand, rightOperand, operator);
+		operator = target.id;
 		if (leftOperand == undefined) {
 			clean();
 			return;
