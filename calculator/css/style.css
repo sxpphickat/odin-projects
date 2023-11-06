@@ -90,3 +90,15 @@ button {
 	display: flex;
 	justify-content: center;
 }
+
+button:hover {
+	filter: brightness(70%);
+}
+
+.numbers .ce {
+	justify-content: start;
+}
+
+.numbers .ce button {
+	background-color:  	#ffb09c;
+}
