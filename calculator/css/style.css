@@ -4,9 +4,20 @@
 }
 
 
+html {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
 body {
 	font-family: 'DigitalNumbers', 'Roboto', sans-serif;
 	caret-color: transparent;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 }
 
 .title {
@@ -101,10 +112,10 @@ button:hover {
 	filter: brightness(90%);
 }
 
-.numbers .ce {
+.numbers .ac {
 	justify-content: start;
 }
 
-.numbers .ce button {
+.numbers .ac button {
 	background-color:  	#ffb09c;
 }
