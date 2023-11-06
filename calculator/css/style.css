@@ -76,6 +76,7 @@ body {
 
 .numbers div{
 	display: flex;
+/* 	justify-content: flex-end; */
 	justify-content: center;
 	gap: 5px;
 	margin: 5px;
