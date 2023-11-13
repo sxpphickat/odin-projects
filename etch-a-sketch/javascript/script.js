@@ -6,7 +6,7 @@ let	color = "#000000";
 const canvaSize = 500; // same as css
 
 function fillCanva(size) {
-	let divSize =	Math.round(canvaSize / squaresPerSize)
+	let divSize =	(canvaSize / squaresPerSize)
 						.toString()
 						.concat("px");
 	//create single row
