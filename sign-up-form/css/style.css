@@ -86,5 +86,14 @@ input {
 }
 
 .item input:invalid {
-	
+
+}
+
+.submit-btn {
+	margin: 10px;
+	margin-left: var(--left-margin);
+	padding: 10px;
+	border-radius: 10px;
+	border-style: none;
+	background-color: rgb(195, 231, 243);
 }
