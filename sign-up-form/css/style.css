@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+	--left-margin: 30px;
+	font-family: 'Roboto', sans-serif;
+}
+
+#myform label {
+	display: block;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+
+}
+
+.item {
+	margin: auto 20px 10px var(--left-margin);
+/* 	height: 33%;
+ */}
+
+.btn, .login, .intro, .begin-form {
+	margin-left: var(--left-margin);
+}
+
+body {
+	display: inline-flex;
+	margin: 0px;
+	height: 100vh;
+	background-color: rgb(247, 247, 247);
+}
+
+.bg-img {
+	height: 100vh;
+	width: auto;
+}
+
+.container {
+
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		display: block;
+	}
+	.bg-img {
+		height: auto;
+		width: 100%;
+	}
+}
+
+#myform {
+	background-color: white;
+	padding: 30px;
+	box-shadow: 0px 2px 5px lightgray;
+}
+
+
+label {
+	font-size: small;
+	font-weight: 300;
+}
+
+input {
+	height: 1.3rem;
+	width: 200px;
+	border-radius: 5px;
+	border-style: solid;
+	border-color: lightgray;
+}
+
+.item input:focus {
+	box-shadow: 0px 2px 5px lightgray;
+	outline: none !important;
+	border-color: blue;
+}
+
+.item input:invalid {
+	
+}
