@@ -41,6 +41,27 @@ body {
 	position: relative;
 }
 
+.source-img {
+	position: absolute;
+	text-align: center;
+	bottom: 2%;
+	width: 100%;
+	font-size: .8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.source-img a {
+}
+
+.source-img a:link, .source-img a:visited {
+	color: white;
+}
+
 .logo {
 	position: absolute;
 	text-align: center;
