@@ -149,3 +149,14 @@ main {
 	}
 
 }
+
+.error {
+	outline: none !important;
+	border-color: red;
+}
+
+#error-msg {
+	display: none;
+	font-size: .7rem;
+	color: red;
+}
