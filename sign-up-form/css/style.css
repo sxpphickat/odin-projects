@@ -74,15 +74,7 @@ main {
 	height: 100%;
 }
 
-@media screen and (max-width: 600px) {
-	body {
-		display: block;
-	}
-	.bg-img {
-		height: auto;
-		width: 100%;
-	}
-}
+
 
 #myform {
 	background-color: white;
@@ -110,9 +102,6 @@ input {
 	border-color: blue;
 }
 
-.item input:invalid {
-
-}
 
 .submit-btn {
 	margin: 10px;
@@ -121,4 +110,42 @@ input {
 	border-radius: 10px;
 	border-style: none;
 	background-color: rgb(195, 231, 243);
+}
+
+.submit-btn:active {
+	filter: brightness(90%);
+}
+
+.end {
+	padding: 0px 0px 50px 0px;
+}
+
+main {
+	max-height: 100vh;
+}
+
+/* .intro, #myform, .end {
+	max-height: 33;
+}
+ */
+
+ #myform {
+	overflow: auto;
+ }
+
+ @media screen and (max-width: 800px) {
+	body {
+		display: block;
+	}
+	.bg-img {
+		height: auto;
+		width: 100%;
+	}
+	.intro {
+		margin-top: 100px;
+	}
+	#myform {
+		overflow: unset;
+	}
+
 }
