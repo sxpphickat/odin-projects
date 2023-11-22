@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Sign Up</title>
+</head>
+<body>
+	<header class="background-img-logo">
+		<img class="bg-img" src="imgs/pexels-neslihan-a-18941875.jpg" alt="random">
+		<div class="logo">
+			<img src="imgs/odin-lined.png" alt="odin logo">
+			<span>ODIN</span>
+		</div>
+		<div class="source-img">
+			<p>Photo by <a target="_blank" href="https://www.pexels.com/@neslihan-a-97164342/">Neslihan A.</a> on <a target="_blank" href="https://www.pexels.com/photo/istanbul-coast-with-galata-tower-18941875/">Pexels</a></p>
+		</div>
+	</header>
+	<main>
+		<div class="intro">
+			<h2>tanto faz intro Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h1>
+		</div>
+		<form id="myform" action="./test">
+			<h2 class="begin-form">Let's do this!</h1>
+			<div class="row">
+				<div class="item">
+					<label for="first-name">FIRST NAME</label>
+					<input type="text" id="first-name" name="first-name" required>
+				</div>
+
+				<div class="item">
+					<label for="last-name">LAST NAME</label>
+					<input type="text" id="last-name" name="last-name" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="item">
+					<label for="user-email">EMAIL</label>
+					<input placeholder="" type="email" id="user-email" name="user-email"  required>
+				</div>
+				<div class="item">
+					<label for="phone-number">PHONE NUMBER</label>
+					<input placeholder="(ddd) 9 xxxx-xxxx" type="tel" id="phone-number" name="phone-number" pattern="[0-9]{2}9[0-9]{4}[0-9]{4}" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="item">
+					<label for="password">PASSWORD</label>
+					<input minlength="8" type="password" id="password" name="password" required>
+					<div id="error-msg">* passwords do not match</div>
+				</div>
+			
+				<div class="item">
+					<label for="conf-password">CONFIRM PASSWORD</label>
+					<input minlength="8" type="password" id="conf-password" name="conf-password" required>
+				</div>
+			</div>
+			
+		</form>
+		<div class="end">
+			<button type="submit" class="submit-btn" form="myform">
+				Create Account 
+			</button>
+			
+			<div class="login">
+				Already have an account? <a href="">Log In</a>
+			</div>
+		</div>
+	</main>
+	<script src="javascript/script.js"></script>
+</body>
+</html>
