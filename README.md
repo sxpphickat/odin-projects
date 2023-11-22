@@ -11,6 +11,8 @@ just trying web dev
 
 [calculator](https://sxpphickat.github.io/odin-projects/calculator/)
 
+[sign-up-form](https://sxpphickat.github.io/odin-projects/sign-up-form/)
+
 
 
 
