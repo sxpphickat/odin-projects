@@ -54,6 +54,43 @@ openDialogButton?.addEventListener("click", () => {
 	formDialog?.showModal(); // ver isso com o guz dps
 });
 
+function clearInputs() {
+	const clearableInputs = document.querySelectorAll(".input");
+
+	clearableInputs.forEach((input) => {
+		if(input.type === "text" || input.type === "number") {
+			input.value = '';
+		} else if (input.type === "checkbox") {
+			input.checked = false;
+		}
+	});
+}
+
 closeDialogButton?.addEventListener("click", () => {
+	clearInputs();
 	formDialog?.close();
 });
+
+submitFormButton?.addEventListener("click", () => {
+	const name = document.querySelector("#bookName").value;
+	const author = document.querySelector("#author").value;
+	const numPages = document.querySelector("#numPages").value;
+	const wasRead = document.querySelector("#wasRead").value;
+
+	const newBook = new Book(name, author, numPages, wasRead);
+	clearInputs();
+	formDialog?.close();
+	addBookToLibrary(newBook);
+	console.log(myLibrary);
+	updateScreen();
+});
+
+const display = document.querySelector("#display");
+
+function updateScreen() {
+	const book = document.createElement("div");
+
+	book.appendChild = document.createElement("div").innerText = "asdf";
+
+	display?.appendChild(book);
+}
