@@ -41,41 +41,92 @@ body > * {
 }
 
 .header {
-	grid-area: header;
+    grid-area: header;
     background-color: var(--rose-50);
-
+    
     display: grid;
     grid-template-areas: 
-                            "search notify"
-                            "welcome actions"
-    ;
+    "search notify"
+    "welcome actions";
+    box-shadow: 0px 4px 4px rgb(211, 211, 211);
 }
 
 .search-bar {
     grid-area: search;
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+    align-items: center ;
 }
+
+.search-bar input {
+    background-color: var(--rose-300);
+    border-style: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0 1rem;
+    height: 2rem;
+}
+
 
 .notify {
     grid-area: notify;
+    display: grid;
+    grid-template-columns: 5rem 3rem 3rem ;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header .notify button {
+    background-color: transparent;
+    border-style: none;
+    justify-self: end;
+    
 }
 
 .welcome {
     grid-area: welcome;
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+}
+
+.welcome .profile-pic {
+    grid-row: 1 / 3;
+}
+
+.profile-pic img {
+    height: auto;
+    width: 3rem;
+    border-radius: 3rem;
 }
 
 .actions {
     grid-area: actions;
+    display: grid;
+
+    grid-template-columns: repeat(3, 5rem) ;
+    gap: 2rem;
+    align-items: center;
 }
 
-.navbar {
-	grid-area: navbar;
+.actions button {
+    border-radius: 4rem;
+    border-style: none;
+    height: 2.3rem;
+    background-color: var(--rose-800);
+    color: var(--rose-50);
+}
 
+
+
+.navbar {
+    grid-area: navbar;
+    
     color: var(--rose-50);
     background-color: var(--rose-800);
-
+    
     font-size: 1.2rem;
     font-weight: 700;
-
+    
     display: grid;
     justify-items: start;
     align-content: start;
@@ -125,3 +176,4 @@ a {
 .main {
 	grid-area: main;
 }
+
